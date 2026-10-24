@@ -1,0 +1,97 @@
+{
+  "source": "tradingview",
+  "fetched_at": "2026-10-24T18:58:51.675Z",
+  "series": {
+    "gold": {
+      "last": 3995.81,
+      "chg_5d_pct": -4.072,
+      "chg_20d_pct": -6.748,
+      "chg_60d_pct": -1.22,
+      "ma20": 4135.8505,
+      "ma50": 4302.003,
+      "above_ma20": false,
+      "above_ma50": false,
+      "n": 120,
+      "symbol": "OANDA:XAUUSD",
+      "label": "Gold spot (OANDA)"
+    },
+    "dxy": {
+      "last": 101.751,
+      "chg_5d_pct": -0.028,
+      "chg_20d_pct": 0.71,
+      "chg_60d_pct": 1.953,
+      "ma20": 101.9188,
+      "ma50": 100.5123,
+      "above_ma20": false,
+      "above_ma50": true,
+      "n": 120,
+      "symbol": "TVC:DXY",
+      "label": "Dollar index (TVC)"
+    },
+    "oil": {
+      "last": 103.45,
+      "chg_5d_pct": 4.442,
+      "chg_20d_pct": 11.898,
+      "chg_60d_pct": 23.228,
+      "ma20": 94.2015,
+      "ma50": 92.4224,
+      "above_ma20": true,
+      "above_ma50": true,
+      "n": 120,
+      "symbol": "TVC:USOIL",
+      "label": "WTI crude (TVC)"
+    },
+    "brent": {
+      "last": 117.39,
+      "chg_5d_pct": 6.776,
+      "chg_20d_pct": 20.264,
+      "chg_60d_pct": 28.957,
+      "ma20": 105.093,
+      "ma50": 100.3038,
+      "above_ma20": true,
+      "above_ma50": true,
+      "n": 120,
+      "symbol": "TVC:UKOIL",
+      "label": "Brent crude (TVC)"
+    },
+    "vix": {
+      "last": 19.45,
+      "chg_5d_pct": -2.701,
+      "chg_20d_pct": 30.8,
+      "chg_60d_pct": 13.809,
+      "ma20": 16.536,
+      "ma50": 15.9142,
+      "above_ma20": true,
+      "above_ma50": true,
+      "n": 120,
+      "symbol": "CBOE:VIX",
+      "label": "VIX (CBOE)"
+    },
+    "spx": {
+      "last": 7623.68,
+      "chg_5d_pct": -0.467,
+      "chg_20d_pct": -1.546,
+      "chg_60d_pct": 2.501,
+      "ma20": 7727.475,
+      "ma50": 7699.639,
+      "above_ma20": false,
+      "above_ma50": false,
+      "n": 120,
+      "symbol": "SP:SPX",
+      "label": "S&P 500 (SP)"
+    },
+    "btc": {
+      "last": 80585.85,
+      "chg_5d_pct": -1.651,
+      "chg_20d_pct": -6.869,
+      "chg_60d_pct": 2.606,
+      "ma20": 82610.5525,
+      "ma50": 81841.0596,
+      "above_ma20": false,
+      "above_ma50": false,
+      "n": 120,
+      "symbol": "BINANCE:BTCUSDT",
+      "label": "Bitcoin (Binance)"
+    }
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "generated_at": "2026-10-24T22:30:12.550227+03:30",
+  "generated_at_display": "2026-10-24 22:30 Iran",
+  "asset_dollar": {
+    "label": "Dollar / Tether",
+    "verdict": "BUY",
+    "score": 0.402,
+    "confidence": 0.97,
+    "reason": "score +0.40",
+    "inputs_used": [
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "dxy",
+      "oil",
+      "brent",
+      "vix",
+      "spx",
+      "btc",
+      "iran_escalation",
+      "coin_trend",
+      "mesghal_trend"
+    ],
+    "inputs_total": 12
+  },
+  "asset_gold": {
+    "label": "Gold (ounce + 18k)",
+    "verdict": "BUY",
+    "score": 0.184,
+    "confidence": 0.93,
+    "reason": "score +0.18",
+    "inputs_used": [
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "dxy",
+      "oil",
+      "brent",
+      "vix",
+      "spx",
+      "btc",
+      "iran_escalation",
+      "coin_trend",
+      "mesghal_trend"
+    ],
+    "inputs_total": 12
+  },
+  "asset_coin": {
+    "label": "Coin (Emami)",
+    "verdict": "BUY",
+    "score": 0.56,
+    "confidence": 1.0,
+    "reason": "score +0.56",
+    "inputs_used": [
+      "coin_trend",
+      "coin_premium",
+      "gold18_trend",
+      "mesghal_trend",
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "iran_escalation",
+      "vix"
+    ],
+    "inputs_total": 9
+  },
+  "asset_meshgal": {
+    "label": "Mesghal",
+    "verdict": "BUY",
+    "score": 0.451,
+    "confidence": 1.0,
+    "reason": "score +0.45",
+    "inputs_used": [
+      "mesghal_trend",
+      "gold18_trend",
+      "coin_trend",
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "iran_escalation",
+      "vix",
+      "dxy"
+    ],
+    "inputs_total": 9
+  },
+  "asset_gold18": {
+    "label": "Gold 18k (per gram)",
+    "verdict": "BUY",
+    "score": 0.406,
+    "confidence": 1.0,
+    "reason": "score +0.41",
+    "inputs_used": [
+      "gold18_trend",
+      "mesghal_trend",
+      "coin_trend",
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "iran_escalation",
+      "vix",
+      "dxy"
+    ],
+    "inputs_total": 9
+  },
+  "raw": {
+    "usdt_toman": 267111.0,
+    "usd_free_toman": 268500.0,
+    "usdt_premium_pct": -0.52,
+    "gold_oz_usd": 3995.81,
+    "gold_20d_pct": -6.75,
+    "us10y": 4.999,
+    "dxy": 101.751,
+    "oil": 103.45,
+    "brent": 117.39,
+    "vix": 19.45,
+    "vix_20d_pct": 30.8,
+    "spx": 7623.68,
+    "btc": 80539.73,
+    "coin_emami_toman": 270920000.0,
+    "coin_emami_20d_pct": 7.945,
+    "coin_premium_pct": 28.76,
+    "coin_premium_20d_ago_pct": 11.24,
+    "mesghal_toman": 117345000.0,
+    "mesghal_20d_pct": 9.367,
+    "mesghal_premium_pct": 4.72,
+    "gold18_toman": 27054800.0,
+    "gold18_20d_pct": 10.874,
+    "gold18_premium_pct": 4.58,
+    "coin_bahar_toman": 261140000.0,
+    "melt_gold18_toman": 25870280.0,
+    "melt_coin_toman": 210402983.0,
+    "melt_meshgal_toman": 112057633.0,
+    "escalation_score": 1.0,
+    "headlines_scanned": 26
+  },
+  "headline_samples": [
+    "Saudi Arabia strikes oil depots in Yemen and says missiles launched toward location of Saudi Aramco HQ",
+    "Iran threatens to strike oil and AI facilities across Gulf if US and Israel renew attacks",
+    "Troubled waters: life during wartime for Iranians on the strait of Hormuz",
+    "People scour strait of Hormuz for spilt cargo after Iran attacks container ships"
+  ],
+  "errors": []
+}
