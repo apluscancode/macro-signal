@@ -1,0 +1,58 @@
+{
+  "fetched_at": "2026-10-31T19:49:17.514624+03:30",
+  "instruments": {
+    "coin_emami": {
+      "symbol": "sekee",
+      "last": 266520000.0,
+      "last_date": "2026/10/29",
+      "chg_5d_pct": 0.79,
+      "chg_20d_pct": -1.856,
+      "chg_60d_pct": 37.729,
+      "ma20": 265845000.0,
+      "ma50": 251575198.1,
+      "above_ma20": true,
+      "above_ma50": true,
+      "n": 180
+    },
+    "coin_bahar": {
+      "symbol": "sekeb",
+      "last": 257270000.0,
+      "last_date": "2026/10/29",
+      "chg_5d_pct": 0.48,
+      "chg_20d_pct": -1.869,
+      "chg_60d_pct": 35.327,
+      "ma20": 257036000.0,
+      "ma50": 244537400.0,
+      "above_ma20": true,
+      "above_ma50": true,
+      "n": 180
+    },
+    "gold18": {
+      "symbol": "geram18",
+      "last": 26154200.0,
+      "last_date": "2026/10/29",
+      "chg_5d_pct": 0.575,
+      "chg_20d_pct": -1.486,
+      "chg_60d_pct": 35.658,
+      "ma20": 26099360.0,
+      "ma50": 24812946.0,
+      "above_ma20": true,
+      "above_ma50": true,
+      "n": 180
+    },
+    "mesghal": {
+      "symbol": "mesghal",
+      "last": 113295000.0,
+      "last_date": "2026/10/29",
+      "chg_5d_pct": 0.577,
+      "chg_20d_pct": -1.521,
+      "chg_60d_pct": 35.658,
+      "ma20": 113329850.0,
+      "ma50": 107860500.0,
+      "above_ma20": false,
+      "above_ma50": true,
+      "n": 180
+    }
+  },
+  "errors": []
+}
