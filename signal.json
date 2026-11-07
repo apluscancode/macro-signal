@@ -1,0 +1,143 @@
+{
+  "generated_at": "2026-11-07T14:37:50.889023+03:30",
+  "generated_at_display": "2026-11-07 14:37 Iran",
+  "asset_dollar": {
+    "label": "Dollar / Tether",
+    "verdict": "BUY",
+    "score": 0.208,
+    "confidence": 0.97,
+    "reason": "score +0.21",
+    "inputs_used": [
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "dxy",
+      "oil",
+      "brent",
+      "vix",
+      "spx",
+      "btc",
+      "iran_escalation",
+      "coin_trend",
+      "mesghal_trend"
+    ],
+    "inputs_total": 12
+  },
+  "asset_gold": {
+    "label": "Gold (ounce + 18k)",
+    "verdict": "BUY",
+    "score": 0.2,
+    "confidence": 0.93,
+    "reason": "score +0.20",
+    "inputs_used": [
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "dxy",
+      "oil",
+      "brent",
+      "vix",
+      "spx",
+      "btc",
+      "iran_escalation",
+      "coin_trend",
+      "mesghal_trend"
+    ],
+    "inputs_total": 12
+  },
+  "asset_coin": {
+    "label": "Coin (Emami)",
+    "verdict": "BUY",
+    "score": 0.387,
+    "confidence": 1.0,
+    "reason": "score +0.39",
+    "inputs_used": [
+      "coin_trend",
+      "coin_premium",
+      "gold18_trend",
+      "mesghal_trend",
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "iran_escalation",
+      "vix"
+    ],
+    "inputs_total": 9
+  },
+  "asset_meshgal": {
+    "label": "Mesghal",
+    "verdict": "BUY",
+    "score": 0.35,
+    "confidence": 1.0,
+    "reason": "score +0.35",
+    "inputs_used": [
+      "mesghal_trend",
+      "gold18_trend",
+      "coin_trend",
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "iran_escalation",
+      "vix",
+      "dxy"
+    ],
+    "inputs_total": 9
+  },
+  "asset_gold18": {
+    "label": "Gold 18k (per gram)",
+    "verdict": "BUY",
+    "score": 0.336,
+    "confidence": 1.0,
+    "reason": "score +0.34",
+    "inputs_used": [
+      "gold18_trend",
+      "mesghal_trend",
+      "coin_trend",
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "iran_escalation",
+      "vix",
+      "dxy"
+    ],
+    "inputs_total": 9
+  },
+  "raw": {
+    "usdt_toman": 267805.0,
+    "usd_free_toman": 266900.0,
+    "usdt_premium_pct": 0.34,
+    "gold_oz_usd": 4070.59,
+    "gold_20d_pct": -2.96,
+    "us10y": 4.859,
+    "dxy": 102.279,
+    "oil": 90.35,
+    "brent": 97.98,
+    "vix": 25.64,
+    "vix_20d_pct": 72.78,
+    "spx": 7376.86,
+    "btc": 76041.79,
+    "coin_emami_toman": 264530000.0,
+    "coin_emami_20d_pct": 2.75,
+    "coin_premium_pct": 24.16,
+    "coin_premium_20d_ago_pct": 17.26,
+    "mesghal_toman": 112796000.0,
+    "mesghal_20d_pct": 1.824,
+    "mesghal_premium_pct": -0.6,
+    "gold18_toman": 26039500.0,
+    "gold18_20d_pct": 1.826,
+    "gold18_premium_pct": -0.6,
+    "coin_bahar_toman": 255020000.0,
+    "melt_gold18_toman": 26197385.0,
+    "melt_coin_toman": 213063329.0,
+    "melt_meshgal_toman": 113474496.0,
+    "escalation_score": 1.0,
+    "headlines_scanned": 29
+  },
+  "headline_samples": [
+    "Will Trump strike nuclear sites again as Iran engages ‘cognitive warfare’?",
+    "Trump confirms US strikes in Iran, insists ‘it’s not a war’",
+    "Strait of Hormuz could reopen as part of Qatari plan for Iran nuclear inspections",
+    "Major construction ongoing near Iran missile bases, satellite images suggest"
+  ],
+  "errors": []
+}

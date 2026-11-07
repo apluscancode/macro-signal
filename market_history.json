@@ -1,0 +1,110 @@
+{
+  "source": "tradingview",
+  "fetched_at": "2026-11-07T11:07:20.435Z",
+  "series": {
+    "gold": {
+      "last": 4070.59,
+      "chg_5d_pct": 5.03,
+      "chg_20d_pct": -2.957,
+      "chg_60d_pct": -6.997,
+      "ma20": 4066.913,
+      "ma50": 4197.581,
+      "above_ma20": true,
+      "above_ma50": false,
+      "n": 120,
+      "symbol": "OANDA:XAUUSD",
+      "label": "Gold spot (OANDA)"
+    },
+    "silver": {
+      "last": 51.9445,
+      "chg_5d_pct": 5.723,
+      "chg_20d_pct": -14.593,
+      "chg_60d_pct": -19.7,
+      "ma20": 54.5576,
+      "ma50": 60.0157,
+      "above_ma20": false,
+      "above_ma50": false,
+      "n": 120,
+      "symbol": "OANDA:XAGUSD",
+      "label": "Silver spot (OANDA)"
+    },
+    "dxy": {
+      "last": 102.279,
+      "chg_5d_pct": 0.31,
+      "chg_20d_pct": 0.046,
+      "chg_60d_pct": 2.653,
+      "ma20": 101.9622,
+      "ma50": 101.0701,
+      "above_ma20": true,
+      "above_ma50": true,
+      "n": 120,
+      "symbol": "TVC:DXY",
+      "label": "Dollar index (TVC)"
+    },
+    "oil": {
+      "last": 90.35,
+      "chg_5d_pct": -12.23,
+      "chg_20d_pct": -1.44,
+      "chg_60d_pct": 11.241,
+      "ma20": 97.406,
+      "ma50": 95.0468,
+      "above_ma20": false,
+      "above_ma50": false,
+      "n": 120,
+      "symbol": "TVC:USOIL",
+      "label": "WTI crude (TVC)"
+    },
+    "brent": {
+      "last": 97.98,
+      "chg_5d_pct": -13.606,
+      "chg_20d_pct": -6.266,
+      "chg_60d_pct": 10.325,
+      "ma20": 107.4435,
+      "ma50": 103.4134,
+      "above_ma20": false,
+      "above_ma50": false,
+      "n": 120,
+      "symbol": "TVC:UKOIL",
+      "label": "Brent crude (TVC)"
+    },
+    "vix": {
+      "last": 25.64,
+      "chg_5d_pct": 32.029,
+      "chg_20d_pct": 72.776,
+      "chg_60d_pct": 75.256,
+      "ma20": 18.828,
+      "ma50": 16.9046,
+      "above_ma20": true,
+      "above_ma50": true,
+      "n": 120,
+      "symbol": "CBOE:VIX",
+      "label": "VIX (CBOE)"
+    },
+    "spx": {
+      "last": 7376.86,
+      "chg_5d_pct": -2.681,
+      "chg_20d_pct": -5.565,
+      "chg_60d_pct": -5.413,
+      "ma20": 7657.8025,
+      "ma50": 7679.4474,
+      "above_ma20": false,
+      "above_ma50": false,
+      "n": 120,
+      "symbol": "SP:SPX",
+      "label": "S&P 500 (SP)"
+    },
+    "btc": {
+      "last": 76041.78,
+      "chg_5d_pct": -1.008,
+      "chg_20d_pct": -7.397,
+      "chg_60d_pct": -3.077,
+      "ma20": 79457.7955,
+      "ma50": 81953.0798,
+      "above_ma20": false,
+      "above_ma50": false,
+      "n": 120,
+      "symbol": "BINANCE:BTCUSDT",
+      "label": "Bitcoin (Binance)"
+    }
+  }
+}

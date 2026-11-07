@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Market Signal — Buy or Sell: Dollar, Gold, Coin, Mesghal</title>
+<meta name="description" content="One verdict per asset — BUY, SELL or HOLD — for the Iranian dollar, gold, Emami coin, mesghal and 18k gold, from live market, macro and geopolitical data.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://apluscancode.github.io/macro-signal/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Market Signal — Buy or Sell">
+<meta property="og:description" content="One verdict per asset for the Iranian market: dollar, gold, coin, mesghal, gold 18k.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="stage" id="stage">
+  <header class="top">
+    <h1>MARKET SIGNAL</h1>
+    <p class="sub" id="stamp">loading…</p>
+    <p class="hint">BUY · SELL · HOLD &nbsp;—&nbsp; mechanical read of market, macro and geopolitical conditions</p>
+  </header>
+
+  <section class="verdicts" id="verdicts">
+    <article class="card" data-key="asset_dollar" data-state="loading">
+      <div class="card-head">
+        <span class="asset">Dollar / Tether</span>
+        <span class="conf"></span>
+      </div>
+      <div class="verdict">—</div>
+    </article>
+
+    <article class="card" data-key="asset_gold" data-state="loading">
+      <div class="card-head">
+        <span class="asset">Gold · global</span>
+        <span class="conf"></span>
+      </div>
+      <div class="verdict">—</div>
+    </article>
+
+    <article class="card" data-key="asset_coin" data-state="loading">
+      <div class="card-head">
+        <span class="asset">Coin · Emami</span>
+        <span class="conf"></span>
+      </div>
+      <div class="verdict">—</div>
+    </article>
+
+    <article class="card" data-key="asset_meshgal" data-state="loading">
+      <div class="card-head">
+        <span class="asset">Mesghal · <span lang="fa">مثقال</span></span>
+        <span class="conf"></span>
+      </div>
+      <div class="verdict">—</div>
+    </article>
+
+    <article class="card wide" data-key="asset_gold18" data-state="loading">
+      <div class="card-head">
+        <span class="asset">Gold 18k · per gram · <span lang="fa">ایران</span></span>
+        <span class="conf"></span>
+      </div>
+      <div class="verdict">—</div>
+    </article>
+
+    <article class="card wide gold-silver" id="gs-card" data-state="loading">
+      <div class="card-head">
+        <span class="asset">Gold / Silver Ratio · <span lang="fa">نسبت طلا به نقره</span></span>
+        <span class="conf" id="gs-conf"></span>
+      </div>
+      <div class="verdict" id="gs-verdict">—</div>
+      <div class="gs-meta" id="gs-meta"></div>
+    </article>
+
+    <article class="card" id="fng-card" data-state="loading">
+      <div class="card-head">
+        <span class="asset">Fear & Greed · <span lang="fa">ترس و طمع</span></span>
+        <span class="conf" id="fng-conf"></span>
+      </div>
+      <div class="verdict" id="fng-verdict">—</div>
+      <div class="gs-meta" id="fng-meta"></div>
+    </article>
+
+    <article class="card" id="dom-card" data-state="loading">
+      <div class="card-head">
+        <span class="asset">BTC Dominance · <span lang="fa">دومینیانس</span></span>
+        <span class="conf" id="dom-conf"></span>
+      </div>
+      <div class="verdict" id="dom-verdict">—</div>
+      <div class="gs-meta" id="dom-meta"></div>
+    </article>
+
+    <article class="card wide" id="etf-card" data-state="loading">
+      <div class="card-head">
+        <span class="asset">BTC ETF Net Flow · <span lang="fa">ورود و خروج پول</span></span>
+        <span class="conf" id="etf-conf"></span>
+      </div>
+      <div class="verdict" id="etf-verdict">—</div>
+      <div class="gs-meta" id="etf-meta"></div>
+    </article>
+  </section>
+
+  <footer class="foot">
+    <span id="age"></span>
+    <span class="dot">•</span>
+    <span>Iran market · geopolitics · macro</span>
+    <span class="dot">•</span>
+    <span>not financial advice</span>
+  </footer>
+</main>
+
+<script>
+(function () {
+  'use strict';
+
+  // only the asset cards carry data-key; the gold/silver ratio card is
+  // rendered separately by loadGoldSilver() and must not be overwritten here
+  var cards = document.querySelectorAll('.verdicts .card[data-key]');
+
+  function paint(card, verdict, conf, used, total) {
+    card.setAttribute('data-state', String(verdict).toLowerCase());
+    card.querySelector('.verdict').textContent = verdict;
+    var n = used && used.length ? used.length : 0;
+    var t = total || 0;
+    card.querySelector('.conf').textContent =
+      (conf ? Math.round(conf * 100) + '%' : '') + (t ? ' · ' + n + '/' + t : '');
+  }
+
+  function load() {
+    fetch('signal.json?t=' + Date.now(), { cache: 'no-store' })
+      .then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      })
+      .then(function (s) {
+        document.getElementById('stamp').textContent = s.generated_at_display || '';
+        cards.forEach(function (card) {
+          var a = s[card.getAttribute('data-key')];
+          if (!a) { paint(card, '—', 0, [], 0); return; }
+          paint(card, a.verdict, a.confidence, a.inputs_used, a.inputs_total);
+        });
+        var age = s.generated_at || '';
+        document.getElementById('age').textContent =
+          'updated ' + age.replace('T', ' ').slice(0, 16);
+      })
+      .catch(function (e) {
+        document.getElementById('stamp').textContent = 'signal unavailable — ' + e.message;
+        cards.forEach(function (c) {
+          c.setAttribute('data-state', 'error');
+          c.querySelector('.verdict').textContent = 'OFFLINE';
+        });
+      });
+  }
+
+  load();
+  loadGoldSilver();
+  setInterval(load, 5 * 60 * 1000);
+  setInterval(loadGoldSilver, 5 * 60 * 1000);
+})();
+
+function loadGoldSilver() {
+  fetch('data/gold_silver.json?t=' + Date.now(), { cache: 'no-store' })
+    .then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(function (d) {
+      var v = document.getElementById('gs-verdict');
+      var c = document.getElementById('gs-conf');
+      var m = document.getElementById('gs-meta');
+      var card = document.getElementById('gs-card');
+      if (!d || !d.ratio) { v.textContent = '—'; return; }
+      var verdict = d.signal_fa || d.signal;
+      v.textContent = verdict;
+      c.textContent = d.ratio.toFixed(2);
+      m.innerHTML = 'طلا: ' + d.gold.last.toFixed(2) + ' USD  |  نقره: ' + d.silver.last.toFixed(2) + ' USD' +
+                    '<br>' + (d.advice || '');
+      // zone class
+      card.setAttribute('data-state', d.zone || 'neutral');
+    })
+    .catch(function (e) {
+      document.getElementById('gs-verdict').textContent = 'OFFLINE';
+      document.getElementById('gs-card').setAttribute('data-state', 'error');
+    });
+}
+</script>
+<script src="macro_extra.js"></script>
+</body>
+</html>
