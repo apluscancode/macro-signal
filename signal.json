@@ -1,0 +1,143 @@
+{
+  "generated_at": "2026-11-14T06:38:52.962843+03:30",
+  "generated_at_display": "2026-11-14 06:38 Iran",
+  "asset_dollar": {
+    "label": "Dollar / Tether",
+    "verdict": "HOLD",
+    "score": 0.096,
+    "confidence": 0.97,
+    "reason": "score +0.10",
+    "inputs_used": [
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "dxy",
+      "oil",
+      "brent",
+      "vix",
+      "spx",
+      "btc",
+      "iran_escalation",
+      "coin_trend",
+      "mesghal_trend"
+    ],
+    "inputs_total": 12
+  },
+  "asset_gold": {
+    "label": "Gold (ounce + 18k)",
+    "verdict": "HOLD",
+    "score": -0.091,
+    "confidence": 0.93,
+    "reason": "score -0.09",
+    "inputs_used": [
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "dxy",
+      "oil",
+      "brent",
+      "vix",
+      "spx",
+      "btc",
+      "iran_escalation",
+      "coin_trend",
+      "mesghal_trend"
+    ],
+    "inputs_total": 12
+  },
+  "asset_coin": {
+    "label": "Coin (Emami)",
+    "verdict": "HOLD",
+    "score": -0.105,
+    "confidence": 1.0,
+    "reason": "score -0.10",
+    "inputs_used": [
+      "coin_trend",
+      "coin_premium",
+      "gold18_trend",
+      "mesghal_trend",
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "iran_escalation",
+      "vix"
+    ],
+    "inputs_total": 9
+  },
+  "asset_meshgal": {
+    "label": "Mesghal",
+    "verdict": "SELL",
+    "score": -0.2,
+    "confidence": 1.0,
+    "reason": "score -0.20",
+    "inputs_used": [
+      "mesghal_trend",
+      "gold18_trend",
+      "coin_trend",
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "iran_escalation",
+      "vix",
+      "dxy"
+    ],
+    "inputs_total": 9
+  },
+  "asset_gold18": {
+    "label": "Gold 18k (per gram)",
+    "verdict": "SELL",
+    "score": -0.211,
+    "confidence": 1.0,
+    "reason": "score -0.21",
+    "inputs_used": [
+      "gold18_trend",
+      "mesghal_trend",
+      "coin_trend",
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "iran_escalation",
+      "vix",
+      "dxy"
+    ],
+    "inputs_total": 9
+  },
+  "raw": {
+    "usdt_toman": 269024.0,
+    "usd_free_toman": 266900.0,
+    "usdt_premium_pct": 0.8,
+    "gold_oz_usd": 3884.685,
+    "gold_20d_pct": -6.74,
+    "us10y": 5.139,
+    "dxy": 103.41,
+    "oil": 88.91,
+    "brent": 96.28,
+    "vix": 19.3,
+    "vix_20d_pct": -3.45,
+    "spx": 7561.67,
+    "btc": 67664.01,
+    "coin_emami_toman": 253880000.0,
+    "coin_emami_20d_pct": -4.524,
+    "coin_premium_pct": 24.86,
+    "coin_premium_20d_ago_pct": 21.96,
+    "mesghal_toman": 108246000.0,
+    "mesghal_20d_pct": -4.734,
+    "mesghal_premium_pct": -0.04,
+    "gold18_toman": 24995400.0,
+    "gold18_20d_pct": -4.523,
+    "gold18_premium_pct": -0.02,
+    "coin_bahar_toman": 246950000.0,
+    "melt_gold18_toman": 25000943.0,
+    "melt_coin_toman": 203332667.0,
+    "melt_meshgal_toman": 108292083.0,
+    "escalation_score": 1.0,
+    "headlines_scanned": 25
+  },
+  "headline_samples": [
+    "Iran honours fallen soldiers in Iran-Iraq war with missile display",
+    "Iran says it targeted US military radar in Bahrain in retaliatory strike",
+    "Trump says US war in Iran ‘effectively over’ as he plays down escalation concerns",
+    "Strait of Hormuz could reopen as part of Qatari plan for Iran nuclear inspections"
+  ],
+  "errors": []
+}
