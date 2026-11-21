@@ -1,0 +1,116 @@
+name: Refresh signal data
+
+# Keeps the Pages data files fresh WITHOUT relying on a server cron.
+# The workflow commits the freshly generated JSON and forces the branch
+# history to a single squashed commit, so the repository size stays flat
+# forever (a normal commit-every-30-minutes repo grows without bound).
+
+on:
+  schedule:
+    # every 30 minutes, offset from the hour to avoid the rush
+    - cron: '7,37 * * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Commit even if nothing changed'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-signal
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install requests
+          npm install @mathieuc/tradingview
+
+      - name: Fetch market history (TradingView)
+        continue-on-error: true
+        run: node fetch_market.js
+
+      - name: Fetch gold/silver ratio (TradingView)
+        continue-on-error: true
+        run: node fetch_gold_silver.js
+
+      - name: Fetch Iranian gold (TGJU)
+        continue-on-error: true
+        run: python3 fetch_iran_gold.py
+
+      - name: Regenerate the signal
+        continue-on-error: true
+        run: python3 signal_engine.py --print
+
+      - name: Commit as a single squashed commit
+        run: |
+          set -euo pipefail
+          git config user.name  'pages-bot'
+          git config user.email 'pages-bot@users.noreply.github.com'
+
+          git add -A
+          if git diff --cached --quiet; then
+            if [ "${{ inputs.force }}" != "true" ]; then
+              echo "NO_CHANGE"
+              exit 0
+            fi
+            # nothing to commit but a forced refresh was requested:
+            # touch the signal file so there is something to commit
+            printf '\n' >> signal.json
+            git add signal.json
+          fi
+
+          # Replace the history with ONE commit and force-push, so GitHub GCs
+          # the unreachable objects and the repo size never grows.
+          tmp="__gh_$(date -u +%s)"
+          git checkout --orphan "$tmp"
+          git add -A
+          git commit -m "chore: refresh signal $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push --force origin "$tmp":main
+          git checkout -B main origin/main
+          git branch -D "$tmp" || true
+
+      - name: Report
+        if: always()
+        run: |
+          {
+            echo "### Signal refresh"
+            echo ""
+            if [ -f signal.json ]; then
+              python3 - <<'PY'
+          import json
+          d = json.load(open('signal.json'))
+          print("generated:", d.get('generated_at_display'))
+          for k, a in (d.get('assets') or {}).items():
+              print(f"  {k:<16} {str(a.get('verdict')):<5} "
+                    f"score={a.get('score')} conf={a.get('confidence')}")
+          if d.get('errors'):
+              print("errors:", d['errors'])
+          PY
+            else
+              echo "signal.json missing"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"

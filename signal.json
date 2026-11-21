@@ -1,0 +1,143 @@
+{
+  "generated_at": "2026-11-21T10:28:14.156897+03:30",
+  "generated_at_display": "2026-11-21 10:28 Iran",
+  "asset_dollar": {
+    "label": "Dollar / Tether",
+    "verdict": "HOLD",
+    "score": -0.035,
+    "confidence": 0.97,
+    "reason": "score -0.04",
+    "inputs_used": [
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "dxy",
+      "oil",
+      "brent",
+      "vix",
+      "spx",
+      "btc",
+      "iran_escalation",
+      "coin_trend",
+      "mesghal_trend"
+    ],
+    "inputs_total": 12
+  },
+  "asset_gold": {
+    "label": "Gold (ounce + 18k)",
+    "verdict": "SELL",
+    "score": -0.203,
+    "confidence": 0.93,
+    "reason": "score -0.20",
+    "inputs_used": [
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "dxy",
+      "oil",
+      "brent",
+      "vix",
+      "spx",
+      "btc",
+      "iran_escalation",
+      "coin_trend",
+      "mesghal_trend"
+    ],
+    "inputs_total": 12
+  },
+  "asset_coin": {
+    "label": "Coin (Emami)",
+    "verdict": "HOLD",
+    "score": -0.088,
+    "confidence": 1.0,
+    "reason": "score -0.09",
+    "inputs_used": [
+      "coin_trend",
+      "coin_premium",
+      "gold18_trend",
+      "mesghal_trend",
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "iran_escalation",
+      "vix"
+    ],
+    "inputs_total": 9
+  },
+  "asset_meshgal": {
+    "label": "Mesghal",
+    "verdict": "SELL",
+    "score": -0.279,
+    "confidence": 1.0,
+    "reason": "score -0.28",
+    "inputs_used": [
+      "mesghal_trend",
+      "gold18_trend",
+      "coin_trend",
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "iran_escalation",
+      "vix",
+      "dxy"
+    ],
+    "inputs_total": 9
+  },
+  "asset_gold18": {
+    "label": "Gold 18k (per gram)",
+    "verdict": "SELL",
+    "score": -0.3,
+    "confidence": 1.0,
+    "reason": "score -0.30",
+    "inputs_used": [
+      "gold18_trend",
+      "mesghal_trend",
+      "coin_trend",
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "iran_escalation",
+      "vix",
+      "dxy"
+    ],
+    "inputs_total": 9
+  },
+  "raw": {
+    "usdt_toman": 275053.0,
+    "usd_free_toman": 269970.0,
+    "usdt_premium_pct": 1.88,
+    "gold_oz_usd": 3538.185,
+    "gold_20d_pct": -11.45,
+    "us10y": 4.95,
+    "dxy": 103.84,
+    "oil": 83.61,
+    "brent": 92.58,
+    "vix": 35.89,
+    "vix_20d_pct": 84.52,
+    "spx": 6910.39,
+    "btc": 57999.87,
+    "coin_emami_toman": 249550000.0,
+    "coin_emami_20d_pct": -6.174,
+    "coin_premium_pct": 33.22,
+    "coin_premium_20d_ago_pct": 25.72,
+    "mesghal_toman": 105046000.0,
+    "mesghal_20d_pct": -7.24,
+    "mesghal_premium_pct": 5.29,
+    "gold18_toman": 24250000.0,
+    "gold18_20d_pct": -7.24,
+    "gold18_premium_pct": 5.28,
+    "coin_bahar_toman": 239530000.0,
+    "melt_gold18_toman": 23032869.0,
+    "melt_coin_toman": 187326327.0,
+    "melt_meshgal_toman": 99767334.0,
+    "escalation_score": 1.0,
+    "headlines_scanned": 25
+  },
+  "headline_samples": [
+    "Kuwait says it repelled first Iranian attack in two months after US strikes island",
+    "Iran war live: Saudi-led coalition downs Houthi missiles",
+    "Iran says it targeted US military radar in Bahrain in retaliatory strike",
+    "Trump says US war in Iran ‘effectively over’ as he plays down escalation concerns"
+  ],
+  "errors": []
+}
