@@ -1,0 +1,13 @@
+{
+  "name": "macro-signal",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Market signal dashboard — TradingView market history fetcher",
+  "scripts": {
+    "fetch": "node fetch_market.js",
+    "probe": "node fetch_market.js --probe"
+  },
+  "dependencies": {
+    "@mathieuc/tradingview": "^3.5.2"
+  }
+}

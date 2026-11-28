@@ -1,0 +1,143 @@
+{
+  "generated_at": "2026-11-28T13:49:16.692944+03:30",
+  "generated_at_display": "2026-11-28 13:49 Iran",
+  "asset_dollar": {
+    "label": "Dollar / Tether",
+    "verdict": "BUY",
+    "score": 0.331,
+    "confidence": 0.97,
+    "reason": "score +0.33",
+    "inputs_used": [
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "dxy",
+      "oil",
+      "brent",
+      "vix",
+      "spx",
+      "btc",
+      "iran_escalation",
+      "coin_trend",
+      "mesghal_trend"
+    ],
+    "inputs_total": 12
+  },
+  "asset_gold": {
+    "label": "Gold (ounce + 18k)",
+    "verdict": "BUY",
+    "score": 0.174,
+    "confidence": 0.93,
+    "reason": "score +0.17",
+    "inputs_used": [
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "dxy",
+      "oil",
+      "brent",
+      "vix",
+      "spx",
+      "btc",
+      "iran_escalation",
+      "coin_trend",
+      "mesghal_trend"
+    ],
+    "inputs_total": 12
+  },
+  "asset_coin": {
+    "label": "Coin (Emami)",
+    "verdict": "BUY",
+    "score": 0.599,
+    "confidence": 1.0,
+    "reason": "score +0.60",
+    "inputs_used": [
+      "coin_trend",
+      "coin_premium",
+      "gold18_trend",
+      "mesghal_trend",
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "iran_escalation",
+      "vix"
+    ],
+    "inputs_total": 9
+  },
+  "asset_meshgal": {
+    "label": "Mesghal",
+    "verdict": "BUY",
+    "score": 0.468,
+    "confidence": 1.0,
+    "reason": "score +0.47",
+    "inputs_used": [
+      "mesghal_trend",
+      "gold18_trend",
+      "coin_trend",
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "iran_escalation",
+      "vix",
+      "dxy"
+    ],
+    "inputs_total": 9
+  },
+  "asset_gold18": {
+    "label": "Gold 18k (per gram)",
+    "verdict": "BUY",
+    "score": 0.417,
+    "confidence": 1.0,
+    "reason": "score +0.42",
+    "inputs_used": [
+      "gold18_trend",
+      "mesghal_trend",
+      "coin_trend",
+      "usdt_wedge",
+      "us10y",
+      "gold_trend",
+      "iran_escalation",
+      "vix",
+      "dxy"
+    ],
+    "inputs_total": 9
+  },
+  "raw": {
+    "usdt_toman": 298365.0,
+    "usd_free_toman": 298680.0,
+    "usdt_premium_pct": -0.11,
+    "gold_oz_usd": 3652.325,
+    "gold_20d_pct": -5.76,
+    "us10y": 4.936,
+    "dxy": 104.035,
+    "oil": 83.32,
+    "brent": 90.78,
+    "vix": 23.81,
+    "vix_20d_pct": 38.43,
+    "spx": 7297.49,
+    "btc": 59419.09,
+    "coin_emami_toman": 264280000.0,
+    "coin_emami_20d_pct": 1.432,
+    "coin_premium_pct": 23.53,
+    "coin_premium_20d_ago_pct": 14.77,
+    "mesghal_toman": 111495000.0,
+    "mesghal_20d_pct": 1.92,
+    "mesghal_premium_pct": -2.14,
+    "gold18_toman": 25473200.0,
+    "gold18_20d_pct": 0.867,
+    "gold18_premium_pct": -3.16,
+    "coin_bahar_toman": 255090000.0,
+    "melt_gold18_toman": 26304349.0,
+    "melt_coin_toman": 213933271.0,
+    "melt_meshgal_toman": 113937814.0,
+    "escalation_score": 1.0,
+    "headlines_scanned": 25
+  },
+  "headline_samples": [
+    "Iran war live: Iran’s army ready to respond to any attack ‘from anywhere’",
+    "Iran says it targeted US military radar in Bahrain in retaliatory strike",
+    "Men accused of orchestrating Iran-linked antisemitic attacks in Sydney and Melbourne named and sanctioned",
+    "Vance stops short of endorsing Trump’s claim that Iran was close to nuclear weapon"
+  ],
+  "errors": []
+}

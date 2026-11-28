@@ -1,0 +1,25 @@
+{
+  "fetched_at": "2026-11-28T10:17:42.046Z",
+  "source": "tradingview",
+  "gold": {
+    "last": 3652.325,
+    "chg_5d_pct": 3.226,
+    "ma20": 3830.6202,
+    "n": 30,
+    "symbol": "OANDA:XAUUSD",
+    "label": "اونس طلا"
+  },
+  "silver": {
+    "last": 43.705,
+    "chg_5d_pct": 5.928,
+    "ma20": 47.3099,
+    "n": 30,
+    "symbol": "OANDA:XAGUSD",
+    "label": "اونس نقره"
+  },
+  "ratio": 83.5677,
+  "signal": "SELL GOLD / BUY SILVER",
+  "signal_fa": "فروش طلا / خرید نقره",
+  "zone": "overvalued",
+  "advice": "نسبت طلا به نقره بالای ۷۰ است — طلا بیش‌ازحد گران شده. تبدیل طلا به نقره"
+}
